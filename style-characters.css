@@ -1,0 +1,418 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header
+{
+    background-image: url(./images/characters/background-1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-nav
+{
+    background-color: rgba(0, 0, 0, .6);
+    margin-left: 6vw;
+    margin-right: 6vw;
+    padding: 1vh 1vw 1vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-left 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-left-1
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-left-2
+{
+    display: none;
+    z-index: 1000;
+}
+
+.header-left a
+{
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: azure;
+    margin: 1vw;
+}
+
+.header-right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fira Sans', sans-serif;
+    color: gold;
+    margin: 0.1vh;
+}
+
+.header-right h1
+{
+    margin: 0;
+    font-size: 20px;
+    text-decoration: overline;
+}
+
+.header-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8vh 8vw 8vh 8vw;
+}
+
+.header-content h1
+{
+    font-family: 'Fira Sans', sans-serif;
+    color: aliceblue;
+}
+  
+.header-slider
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
+    font-family: 'Fira Sans', sans-serif;
+    color: azure;
+    margin-bottom: 18vh;
+}
+
+.slider
+{
+    position: relative;
+    background: rgba(0, 0, 0, .5);
+    margin-top: 4vh;
+    width: 800px;
+    margin: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slide
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: gold 5px solid;
+    clip-path: circle(0% at 0% 50%);
+}
+
+.slide.active
+{
+    clip-path: circle(200% at 0% 50%);
+    transition: 1.5s;
+}
+
+.slide img
+{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-info
+{
+    position: relative;
+    color: gold;
+    background: rgba(0, 0, 0, .7);
+    width: 90%;
+    margin-top: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 8px;
+    padding: 5px 5px 5px 5px;
+}
+
+.nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    color: azure;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider:hover .nav
+{
+    opacity: 1;
+}
+
+.prev-button, .next-button
+{
+    z-index: 999;
+    font-size: 35px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.nav-visibility
+{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-icon
+{
+    z-index: 999;
+    background: rgba(255, 255, 255, .5);
+    width: 25px;
+    height: 5px;
+    transform: translateY(-40px);
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.slide-icon.active
+{
+    background: gold;
+}
+
+.footer
+{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+    height: 23vh;
+    padding: 0 3vw 0 3vw;
+}
+
+.footer-left, .footer-right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+}
+
+.footer-left h1
+{
+    margin: 0.7vh;
+}
+
+.footer-right-img
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-right img
+{
+    width: 30px;
+    margin: 0.5vw;
+}
+
+@media (max-width : 800px)
+{
+    .header-nav
+    {
+        height: 12vh;
+    }
+
+    .header-left-1
+    {
+        display: none;
+    }
+
+    .header-left-2
+    {
+        padding-left: 10px;
+        display: block;
+    }
+
+    .header-left-2 ul
+    {
+        padding: 0;
+        margin: 0;
+        float: right;
+        margin-right: 30px;
+    }
+
+    .header-left-2 ul li
+    {
+        position: relative;
+        display: inline-block;
+        list-style: none;
+    }
+
+    .header-left-2 ul li img
+    {
+        width: 15px;
+        height: 15px;
+        display: block;
+        color: azure;
+        text-decoration: none;
+    }
+
+    .header-left-2 ul li a:hover
+    {
+        background-color: gold;
+    }
+
+    .header-left-2 ul ul
+    {
+        position: absolute;
+        display: none;
+        background-color: rgba(0, 0, 0, .5);
+        margin-left: -10px;
+    }
+
+    .header-left-2 ul li:hover > ul
+    {
+        display: block;
+    }
+
+    .header-left-2 ul ul li
+    {
+        position: relative;
+        width: 140px;
+        float: none;
+        display: list-item;
+        margin: 12px;
+    }
+
+    .header-right h1
+    {
+        font-size: 14px;
+    }
+
+    .slider
+    {
+        margin-top: 4vh;
+        width: 500px;
+    }
+
+    .slide-info
+    {
+        margin-top: 40vh;
+        font-size: 12px;
+    }
+}
+
+@media (max-width : 430px)
+{
+    .header
+    {
+        height: 110vh;
+    }
+
+    .header-nav
+    {
+        height: 14vh;
+    }
+
+    .header-right h1
+    {
+        font-size: 11px;
+    }
+
+    .header-slider h1
+    {
+        font-size: 20px;
+    }
+
+    .slider
+    {
+        margin-top: 4vh;
+        width: 300px;
+    }
+
+    .slide-info
+    {
+        margin-top: 40vh;
+        font-size: 10px;
+    }
+
+    .footer
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footer-left, .footer-right
+    {
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 250px)
+{
+    .header
+    {
+        height: 130vh;
+    }
+
+    .header-nav
+    {
+        height: 14vh;
+    }
+
+    .header-right h1
+    {
+        font-size: 9px;
+    }
+
+    .header-slider h1
+    {
+        font-size: 18px;
+    }
+
+    .slider
+    {
+        margin-top: 4vh;
+        width: 150px;
+    }
+
+    .slide-info
+    {
+        margin-top: 37vh;
+        font-size: 7px;
+    }
+
+    .footer
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footer-left, .footer-right
+    {
+        font-size: 6px;
+    }   
+}

@@ -1,0 +1,556 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url(./images/background6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header
+{
+    height: 650px;
+}
+
+.header-nav
+{
+    background-color: rgba(0, 0, 0, .6);
+    margin-left: 6vw;
+    margin-right: 6vw;
+    padding: 1vh 1vw 1vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-left 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-left-1
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-left-2
+{
+    display: none;
+}
+
+.header-left a
+{
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: azure;
+    margin: 1vw;
+}
+
+.header-right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fira Sans', sans-serif;
+    color: gold;
+    margin: 0.1vh;
+}
+
+.header-right h1
+{
+    margin: 0;
+    font-size: 20px;
+    text-decoration: overline;
+}
+
+.header-1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 13vh;
+}
+
+.header-1 img
+{
+    width: 300px;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .5);
+    padding-top: 8vh;
+    padding-bottom: 15vh;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.content-1 h2
+{
+    font-size: 45px;
+    color: gold;
+}
+
+.prev, .next
+{
+    width: 2vw;
+    height: 3vw;
+    cursor: pointer;
+    float: left;
+    margin: 30vh 4vw 0 4vw;
+}
+
+.slide
+{
+    float: left;
+    position: relative;
+}
+
+.slide-info
+{
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    font-size: 20px;
+}
+
+.slide-info img
+{
+    width: 50vw;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.slide-info h1,p
+{
+    color: gold;
+    text-align: center;
+}
+
+.slide-info.active
+{
+    display: inline-block;
+}
+
+.content-2
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 2vw 15vh 1vw;
+    background-color: rgba(36, 37, 38, .6);
+    align-items: center;
+}
+
+.content-2-left
+{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 5vw;
+    font-weight: bold;
+}
+
+.content-2-left h1
+{
+    font-size: 18px;
+    margin-bottom: 4vw;
+    color: azure;
+}
+
+.content-2-left p
+{
+    color: gold;
+    margin-bottom: 1.5vh;
+}
+
+.content-2-left-logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-2-left-logo img
+{
+    width: 180px;
+    height: 55px;
+    background-color: transparent;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.content-2-right img
+{
+    height: 300px;
+    width: 500px;
+    border: solid gold 3px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.footer
+{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+    height: 23vh;
+    padding: 0 3vw 0 3vw;
+}
+
+.footer-left, .footer-right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+}
+
+.footer-left h1
+{
+    margin: 0.7vh;
+}
+
+.footer-right-img
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-right img
+{
+    width: 30px;
+    margin: 0.5vw;
+}
+
+@media (max-width : 800px)
+{
+    .header
+    {
+        height: 90vh;
+    }
+
+    .header-nav
+    {
+        height: 12vh;
+    }
+
+    .header-left-1
+    {
+        display: none;
+    }
+
+    .header-left-2
+    {
+        padding-left: 10px;
+        display: block;
+    }
+
+    .header-left-2 ul
+    {
+        padding: 0;
+        margin: 0;
+        float: right;
+        margin-right: 30px;
+    }
+
+    .header-left-2 ul li
+    {
+        position: relative;
+        display: inline-block;
+        list-style: none;
+    }
+
+    .header-left-2 ul li img
+    {
+        width: 15px;
+        height: 15px;
+        display: block;
+        color: azure;
+        text-decoration: none;
+    }
+
+    .header-left-2 ul li a:hover
+    {
+        background-color: gold;
+    }
+
+    .header-left-2 ul ul
+    {
+        position: absolute;
+        display: none;
+        background-color: rgba(0, 0, 0, .5);
+        margin-left: -10px;
+    }
+
+    .header-left-2 ul li:hover > ul
+    {
+        display: block;
+    }
+
+    .header-left-2 ul ul li
+    {
+        position: relative;
+        width: 140px;
+        float: none;
+        display: list-item;
+        margin: 12px;
+    }
+
+    .header-right h1
+    {
+        font-size: 14px;
+    }
+
+    .content-1
+    {
+        padding-top: 5vh;
+        padding-bottom: 10vh;
+    }
+    
+    .content-1 h2
+    {
+        font-size: 35px;
+    }
+
+    .prev, .next
+    {
+        margin: 25vh 3vw 0 3vw;
+    }
+    
+    .slide-info
+    {
+        width: 70vw;
+        height: 55vh;
+    }
+    
+    .slide-info h1,p
+    {
+        font-size: 20px;
+    }
+    
+    .slide-info img
+    {
+        width: 70vw;
+        height: 35vh;
+        object-fit: cover;
+    }
+
+    .content-2
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-2-left h1
+    {
+        font-size: 14px;
+    }
+
+    .content-2-left-logo img
+    {
+        width: 140px;
+        height: 40px;
+    }
+    
+    .content-2-right img
+    {
+        width: 400px;  
+        margin-bottom: 8vh;
+    }
+}
+
+@media (max-width : 480px)
+{
+    .header
+    {
+        height: 70vh;
+    }
+
+    .header-nav
+    {
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding: 1vh 1vw 1vh 1vw;
+        height: 10vh;
+    }
+
+    .header-right h1
+    {
+        display: none;
+    }
+
+    .header-1 img
+    {
+        width: 170px;
+    }
+
+    .content-1 h2
+    {
+        font-size: 20px;
+    }
+    
+    .prev, .next
+    {
+        margin: 15vh 3vw 0 3vw;
+    }
+
+    .slide-info
+    {
+        width: 65vw;
+        height: 30vh;
+    }
+    
+    .slide-info h1,p
+    {
+        font-size: 12px;
+    }
+    
+    .slide-info img
+    {
+        width: 65vw;
+        height: 17vh;
+        object-fit: cover;
+    }
+
+    .content-2-left h1
+    {
+        display: block;
+        font-size: 14px;
+    }
+
+    .content-2-left-logo img
+    {
+        width: 90px;
+        height: 25px;
+    }
+    
+    .content-2-right img
+    {
+        width: 230px;  
+    }
+
+    .footer
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footer-left, .footer-right
+    {
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 250px)
+{
+    .header
+    {
+        height: 50vh;
+    }
+
+    .header-nav
+    {
+        height: 7vh;
+    }
+
+    .header-left-2
+    {
+        padding-left: 15px;
+    }
+
+    .header-left-2 ul li img
+    {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header-left-2 ul ul li
+    {
+        width: 140px;
+        margin: 12px;
+    }
+
+    .header-1 img
+    {
+        width: 110px;
+    }
+
+    .content-1 h2
+    {
+        font-size: 13px;
+    }
+
+    .prev, .next
+    {
+        width: 5vw;
+        height: 6vw;
+        margin: 8vh 3vw 0 3vw;
+    }
+
+    .slide-info
+    {
+        width: 35vw;
+        height: 20vh;
+    }
+    
+    .slide-info h1,p
+    {
+        font-size: 4px;
+    }
+    
+    .slide-info img
+    {
+        width: 35vw;
+        height: 15vh;
+    }
+
+    .content-2
+    {
+        padding-bottom: 5vh;
+    }
+
+    .content-2-left h1
+    {
+        font-size: 10px;
+    }
+
+    .content-2-left-logo img
+    {
+        width: 50px;
+        height: 20px;
+    }
+
+    .content-2-right img
+    {
+        width: 130px;
+        height: 100px;
+    }
+}
